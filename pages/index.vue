@@ -3,30 +3,25 @@
     <div>
       <Logo />
       <h1 class="title">vuejstime</h1>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+      <home-action-buttons/>
+      <home-counter :initial-counter="initial"/>
+      <button @click="initial++">update prop ({{initial}})</button>
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import HomeActionButtons from '../components/HomeActionButtons.vue'
+import HomeCounter from '../components/HomeCounter.vue'
+export default {
+  components: { HomeActionButtons, HomeCounter },
+  data(){
+    return {
+      initial: 4
+    }
+  }
+  
+  }
 </script>
 
 <style>
@@ -57,7 +52,5 @@ export default {}
   padding-bottom: 15px;
 }
 
-.links {
-  padding-top: 15px;
-}
+
 </style>

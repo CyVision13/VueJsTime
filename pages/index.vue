@@ -4,8 +4,9 @@
       <Logo />
       <h1 class="title">vuejstime</h1>
       <home-action-buttons/>
-      <home-counter :initial-counter="initial"/>
-      <button @click="initial++">update prop ({{initial}})</button>
+       <home-counter :defaultInitialValue="11" />
+      <!-- //:initial-counter="initial" -->
+      <button  @click="initial++">update prop ({{initial}})</button>
     </div>
   </div>
 </template>

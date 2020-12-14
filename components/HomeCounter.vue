@@ -10,10 +10,16 @@
 export default {
     // props:['initialCounter'],
     props:{
+        defaultInitialValue:{
+            type:Number,
+            required:true
+        },
         initialCounter:{
             type:Number,
-            required:true,
-            
+            // required:true,
+            default(){
+                return this.defaultInitialValue
+            }
         }
     },
     data(){

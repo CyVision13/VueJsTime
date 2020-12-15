@@ -1,6 +1,7 @@
 <template>
   <div>
-      
+      <event-child-nested></event-child-nested>
+      <hr>
       <p>event child</p>
       <button @click="submit">Submit</button>
   </div>

@@ -5,13 +5,19 @@
       <!-- <div :class="{active:isActive}" class="binding" @click="toggle">binding : {{isActive.toString()}}</div> -->
       <div :class="[{active:isActive},'b']" class="binding" @click="toggle">binding : {{isActive.toString()}}</div>
       <div :style="{color:'red'}">style binding</div>
+      <hr>
+      <binding-child a="a" b="b">
+
+      </binding-child>
   </div>
 </template>
 
 <script>
+import BindingChild from '~/components/BindingChild.vue'
 export default {
     name:'Binding',
-    data(){
+   
+         data(){
         return {
             isActive:false
         }
